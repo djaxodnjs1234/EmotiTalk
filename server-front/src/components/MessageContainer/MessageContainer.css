@@ -1,0 +1,116 @@
+/* src/components/MessageContainer/MessageContainer.css */
+
+.chat-wrapper {
+    height: 100%;
+    max-height: calc(100vh - 50px); /* 화면 높이에 맞춰 조정 (InputField 높이 등을 고려) */
+    overflow-y: auto; /* 내용이 넘치면 스크롤 */
+    padding: 10px;
+    background-color: #afc3d5; /* 배경색 */
+    display: flex; 
+    flex-direction: column; /* 메시지들을 세로로 정렬 */
+}
+
+/* 개별 메시지 아이템 래퍼 */
+.message-item-wrapper {
+    margin-bottom: 10px; /* 각 메시지 그룹 사이의 간격 */
+}
+
+/* 내 메시지 컨테이너 */
+.my-message-container {
+    display: flex;
+    justify-content: flex-end; /* 오른쪽 정렬 */
+}
+
+/* 내 메시지 버블 */
+.my-message {
+    padding: 10px 14px; /* 상하 10px, 좌우 14px로 여유 */
+    border-radius: 12px;
+    display: flex;
+    align-items: center; /* 이모지와 텍스트 세로 정렬 */
+    line-height: 1.4; /* 텍스트 줄 간격 */
+    background-color: #FEE500; /* ✅ 기본 배경색 추가 (예: 카카오톡 노란색) */
+}
+
+/* 상대방 메시지 컨테이너 */
+.your-message-container {
+    display: flex;
+    justify-content: flex-start; /* 왼쪽 정렬 */
+    align-items: flex-start; /* 프로필 이미지와 메시지를 위쪽으로 정렬 */
+}
+
+/* 상대방 메시지 버블 */
+.your-message {
+    padding: 10px 14px; /* 상하 10px, 좌우 14px로 여유 */
+    border-radius: 12px;
+    display: flex;
+    align-items: center; /* 이모지와 텍스트 세로 정렬 */
+    line-height: 1.4; /* 텍스트 줄 간격 */
+    background-color: #FFFFFF; /* ✅ 기본 배경색 추가 (예: 흰색) */
+}
+
+/* 프로필 이미지 */
+.profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    flex-shrink: 0; /* 이미지 크기 유지 (축소 방지) */
+}
+
+/* 프로필 이미지가 없을 때 빈 공간을 채우는 용도 */
+.profile-placeholder {
+    width: 40px; /* 프로필 이미지와 동일한 너비 */
+    margin-right: 10px; /* 프로필 이미지와 동일한 마진 */
+    flex-shrink: 0; /* 크기 유지 */
+}
+
+/* 시스템 메시지 컨테이너 */
+.system-message-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px; /* 시스템 메시지 아래 간격 */
+}
+
+/* 시스템 메시지 텍스트 */
+.system-message {
+    color: #888;
+    font-size: 0.8rem;
+    padding: 5px;
+}
+
+/* 상대방 메시지 내부 컨텐츠 (이름과 말풍선) */
+.your-message-content {
+    display: flex;
+    flex-direction: column; /* 이름과 메시지를 세로로 쌓음 */
+    align-items: flex-start;
+}
+
+/* 사용자 이름 스타일 */
+.user-name {
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 4px; /* 메시지 버블과의 간격 */
+    margin-left: 2px;
+}
+
+/* 다크모드 전용 스타일 */
+.App.dark .chat-wrapper {
+    background-color: #111827; /* 어두운 배경 */
+  }
+  
+  .App.dark .my-message {
+    background-color: #3c3c3c;
+  }
+  
+  .App.dark .your-message {
+    background-color: #444;
+  }
+  
+  .App.dark .user-name {
+    color: #aaa;
+  }
+  
+  .App.dark .system-message {
+    color: #bbb;
+  }
+  

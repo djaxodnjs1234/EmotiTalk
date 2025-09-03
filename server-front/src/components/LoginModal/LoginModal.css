@@ -1,0 +1,108 @@
+/* 탭 버튼 래퍼 */
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+  gap: 10px;
+}
+
+/* 탭 버튼 스타일 */
+.tab-buttons button {
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 6px 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: #666;
+  transition: border-color 0.3s, color 0.3s;
+}
+
+.tab-buttons button.active {
+  border-color: #f7e600;
+  color: #222;
+}
+
+.tab-buttons button:hover:not(.active) {
+  color: #444;
+}
+
+/* 로그인 오류 메시지 스타일 (기존에 추가) */
+.login-error {
+  color: #e74c3c;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+/* 로그인 모달 배경 */
+.login-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* 로그인 모달 박스 */
+.login-modal {
+  background-color: white;
+  padding: 20px 30px;
+  border-radius: 8px;
+  width: 320px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* 제목 */
+.login-modal h2 {
+  margin: 0 0 10px 0;
+  text-align: center;
+  color: #333;
+}
+
+/* 입력창 */
+.login-modal input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.5px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+.login-modal input:focus {
+  border-color: #f7e600; /* 기존 send-button 노란색과 맞춤 */
+  outline: none;
+}
+
+/* 버튼 */
+.login-modal button {
+  background-color: #f7e600;
+  color: black;
+  font-weight: 600;
+  border: none;
+  padding: 10px 0;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.login-modal button:disabled {
+  background-color: #e0d96c;
+  cursor: not-allowed;
+}
+
+.login-modal button:hover:not(:disabled) {
+  background-color: #e1d502;
+}

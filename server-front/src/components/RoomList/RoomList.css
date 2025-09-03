@@ -1,0 +1,31 @@
+/* .room-list-area {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+  min-width: 180px;
+  max-width: 220px;
+}
+
+.room-list-area h4 {
+  margin-bottom: 12px;
+  font-weight: 700;
+  color: #333;
+}
+
+.room-list-area ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.room-list-area li.active {
+  background: #ffeb3b;
+  font-weight: 700;
+}
+
+.room-list-area li:hover {
+  background-color: #fff59d;
+} */

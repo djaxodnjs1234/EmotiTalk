@@ -1,0 +1,13 @@
+front - 
+npm start
+
+back - 
+node index
+
+ai - 
+python app.py
+
+nginx 설정 필요
+포트포워딩 설정 후 배포
+
+http://119.56.225.130:132/
